@@ -93,7 +93,7 @@ color: orange;
 /*header*/
 
 .header {
-    background-image: url(../media/bg-imagen.jpeg);
+    background-image: url('media/bg-imagen.jpeg');
     background-position: center;
 }
 
@@ -155,18 +155,18 @@ color: orange;
 }
 
 .productos article:nth-child(1) {  /*con nth-child(1) accedemos al primer articulo de la seccion*/
-    background-image: url(../media/producto-01.jpg);
+    background-image: url('media/producto-01.jpg');
     
 }
 
 
 .productos article:nth-child(2) {  /*con nth-child(1) accedemos al primer articulo de la seccion*/
-    background-image: url(../media/producto-02.jpg);
+    background-image: url('media/producto-02.jpg');
 }
 
 
 .productos article:nth-child(3) {  /*con nth-child(1) accedemos al primer articulo de la seccion*/
-    background-image: url(../media/producto-03.jpg);
+    background-image: url('media/producto-03.jpg');
 
 }
 
