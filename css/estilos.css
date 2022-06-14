@@ -1,0 +1,385 @@
+/* ------------------------- */
+/* Estilos Generales */
+/* ------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+body { 
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.texto-naranja {
+    font-weight: 300;
+    color: orange;
+}
+
+.texto-blanco {
+    font-weight: 700;
+    color: #fff;
+}
+
+.texto-negro {
+	color: #000;
+}
+
+/* Menu de navegacion */
+
+nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* space between + width 100% separa los elementos de una esquina a la otra*/
+    z-index: 70;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.nav li,
+.nav a {
+    display: inline-block; /*para que un enlace se ponga al lado del otro*/
+    margin: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 19px;
+    color: rgb(180, 180, 180);
+    font-weight: bold;
+    transition: .5s ease;
+}
+
+.nav li.active {
+    border-bottom: 2px solid orange;
+}
+
+.menu li a {
+    transition: .5s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li.active a,
+.menu li:hover a {
+    color: orange;
+}
+
+.nav .marca:hover {
+color: orange;
+}
+/* Clases de full page.js*/
+#fp-nav ul li a span{
+    background-color: orange;  /*con esta etiqueta cambiamos color de circulitos*/
+
+}
+
+#fp-nav ul li .fp-tooltip {
+    color: orange;
+    font-weight: bold;
+}
+
+/* Fin clases de full page.js*/
+
+
+/*header*/
+
+.header {
+    background-image: url(../media/bg-imagen.jpeg);
+    background-position: center;
+}
+
+.header .contenedor-titulo {
+     text-align: center;
+     position: relative;
+     z-index: 99; /*le da una posicion por sobre otros elementos*/
+}
+
+.header .titulo {
+    font-size: 70px;
+    text-transform: uppercase;
+}
+
+.header .contenedor-icono {
+    position: absolute; /* de esta manera podemos modificar sus propiedades como el z-index*/
+    z-index: 99;
+    bottom: 3%; /* de abajo hacia arriba un 3%*/
+    left: 50%;
+    font-size: 40px;
+    animation: bajar-subir 2s ease infinite; /* se repite infinitamente por un segundo*/
+}
+
+
+.bg-video {
+    position: absolute;
+    z-index:10;
+    right: 0; /*top y right 0 son propiedades que ajustan el video a la esquina superior y derecha*/
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-color: #000;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover; /* cover es la propiedad que hara que ocupe toda la pagina con ayuda 
+                        del height,width y background size 100%*/
+    
+}
+
+/* Animaciones */
+@keyframes bajar-subir{   
+    0% {transform: translateY(20px);}  /* translate y sirve para que vaya de arriba hacia abajo*/
+    25% {transform: translateY(0);}
+    100% {transform: translateY(20px);}
+
+}
+
+/* Fin animaciones */
+
+
+/* Productos Seccion 2*/
+
+
+.productos article {
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.productos article:nth-child(1) {  /*con nth-child(1) accedemos al primer articulo de la seccion*/
+    background-image: url(../media/producto-01.jpg);
+    
+}
+
+
+.productos article:nth-child(2) {  /*con nth-child(1) accedemos al primer articulo de la seccion*/
+    background-image: url(../media/producto-02.jpg);
+}
+
+
+.productos article:nth-child(3) {  /*con nth-child(1) accedemos al primer articulo de la seccion*/
+    background-image: url(../media/producto-03.jpg);
+
+}
+
+.productos .informacion-producto {
+    margin: 0 30px;
+    
+}
+
+.productos .informacion-producto:before { /*:before sirve para acceder a lo que esta antes de informacion-producto*/
+    content: ""; /*comillas vacias sirve para decir que estara vacio*/
+    height: 50px;
+    width: 2px;
+    display: inline-block;
+    background-color: orange;
+    position: absolute;
+    top: 48%;
+    margin: -10px;
+}
+
+.productos .modelo {
+    font-size: 4vh;
+    
+}
+
+.productos .descripcion {
+    font-size: 3vh;
+}
+
+.productos .precio {
+    font-size: 3.5vh;
+}
+
+.productos .precio:before { /* agregar simbolo de dinero antes del precio usando before (con esto no se puede seleccionar el elemento)*/
+    content: "$" ;
+    display: inline-block;
+}
+/* Fin Productos Seccion 2*/
+
+/* Clases de fullpage.js FLECHAS DE SLIDE*/
+
+.fp-controlArrow.fp-next,               /*clases de flechas*/
+.fp-controlArrow.fp-prev {
+    top: 95%;
+    
+}
+
+.fp-controlArrow.fp-prev {
+    left: 80%;
+    border-width: 20px 20px 20px 0px;  /* le ponemos estas propiedades porque el elemento es un rectangulo y asi lo modificamos para que se vea como un triangulo o flecha */
+    border-color: transparent rgb(0, 0, 0) transparent transparent; /*al tratarse de un rectangulo debemos hacer que ciertos espacios del elemento se vean transparentes*/
+
+}
+
+.fp-controlArrow.fp-next {
+    right: 50px;
+    border-width: 20px 0px 20px 20px;  /* le ponemos estas propiedades porque el elemento es un rectangulo y asi lo modificamos para que se vea como un triangulo o flecha */
+    border-color: transparent  transparent transparent rgb(0, 0, 0)  ; /*al tratarse de un rectangulo debemos hacer que ciertos espacios del elemento se vean transparentes*/
+
+}
+
+/* Fin Clases de fullpage.js FLECHAS DE SLIDE*/
+
+
+/* Seccion 3*/
+
+footer .texto-naranja {
+    text-transform: uppercase;
+    font-size: 9vh;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+}
+
+footer h2 {
+    opacity: 0; /* con opacity hacemos que el texto aparezca cuando entramos a la seccion*/
+    font-family: 'Josefin Sans', sans-serif;
+    transition: 1s ease all;
+}
+
+footer .redes-sociales {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 50px;
+}
+
+footer .redes-sociales a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px ;
+    height: 100px;
+    background-color: white;
+    color:  #30313a;
+    text-decoration: none;
+    border-radius: 100px;
+    margin: 0 20px;
+
+}
+
+.footer .facebook i { color: rgb(48, 48, 200);}
+
+.footer .instagram i { color: #c13584;}
+
+.footer .linkedin i { color: rgb(28, 144, 211);}
+
+.footer .facebook:hover { background: rgb(48, 48, 200);}
+
+.footer .instagram:hover { background: #c13584;}
+
+.footer .linkedin:hover { background: rgb(18, 145, 218);}
+
+.footer .facebook:hover i {color:white ;}
+
+.footer .instagram:hover i { color:white ;}
+
+.footer .linkedin:hover i { color:white ;}
+
+/*Responsive*/
+
+@media screen and (max-width: 768px) {
+    .menu li a,
+    .menu li.active a  {
+        font-size: 18px;
+    }
+
+    .modelo {
+        font-size: 40px;
+    }
+    .precio {
+        font-size: 23px;
+    }
+
+    footer h2 {
+        font-size: 15px;
+    }
+
+    footer .redes-sociales {
+        font-size: 30px;
+    }
+
+    footer .redes-sociales a {
+        width: 70px;
+        height: 70px;
+    }
+
+    footer .texto-naranja {
+        font-size: 40px ;
+    }
+}
+
+
+/* Responsive 576px*/
+
+@media screen and (max-width: 576px) {
+    .header .titulo {
+        font-size: 60px;
+    }
+
+    .informacion-producto {
+        position: absolute; /*con esto puedo cambiar el posicionamiento de la informacion*/
+        top: 70%;
+    }
+
+    .fp-controlArrow.fp-next {
+        left: 100px;
+    }
+    .fp-controlArrow.fp-prev {
+        left: 25px;
+    }
+
+}
+
+
+    @media screen and (max-width: 490px) {
+
+        .nav {
+            display: block;
+            text-align: center;
+        }
+
+        .nav a{
+            font-size: 16px;
+            margin-bottom: 0;
+
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menu li a,
+        .menu li.active a {
+            font-size: 15px;
+            padding: 5px;
+        }
+
+        .titulo {
+            font-size: 45px;
+        } 
+
+        .titulo .modelo {
+            font-size: 30px;
+        }
+
+        .footer .texto-naranja {
+            font-size: 18px;
+        }
+
+        
+    footer .redes-sociales a {
+        width: 50px;
+        height: 50px;
+    }
+    }

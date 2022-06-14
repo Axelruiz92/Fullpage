@@ -1,0 +1,24 @@
+Video:
+https://www.youtube.com/watch?v=5BicGUzUidU
+
+Script para los iconos:
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+Documentacion:
+https://github.com/alvarotrigo/fullPage.js/tree/master/lang/spanish/#uso
+
+link para css:
+https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.css
+
+en css:(al final del head)
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css">
+
+link para js:
+https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.js
+
+en js: (al final del body)
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
+
+
+
+
